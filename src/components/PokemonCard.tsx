@@ -1,14 +1,20 @@
+import "./PokemonCard.css"
 
-function PokemonCard({pokemon}) {
+interface PokemonCard{
+	name: string;
+	imgSrc?: string;
+}
+
+function PokemonCard({datapokemon}) {
 
 	return (
 		<figure>
-			{pokemon.imgSrc != null ? (
-				<img src={pokemon.imgSrc} alt={pokemon.name} />
+			{datapokemon.imgSrc != null ? (
+				<img src={datapokemon.imgSrc} alt={datapokemon.name} />
 			) : (
 				<p>???</p>
 			)}
-			<figcaption>{pokemon.name}</figcaption>
+			<figcaption>{datapokemon.name}</figcaption>
 		</figure>
 	);
 }

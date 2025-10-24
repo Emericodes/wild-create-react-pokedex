@@ -1,19 +1,39 @@
 import "./App.css";
+import { useState } from "react";
+
 import PokemonCard from "./components/PokemonCard";
 
 const pokemonList = [
 	{
-		name: "bulbasaur",
+		name: "Bulbasaur (de tes morts)",
 		imgSrc:
 			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
 	},
 	{
-		name: "mew",
+		name: "Mew",
 	},
 ];
 
 function App() {
-	return <PokemonCard pokemon={pokemonList[0]} />;
+  const [pokemonName, setPokemonName] = useState("Bulbasaur (de tes morts)");
+
+  const pokemon = pokemonList.find((pokemon) => pokemon.name === pokemonName);
+
+  if (pokemon == null) {
+    throw new Error("Invalid pokemon name");
+  }
+
+  return (
+    <div>
+      <PokemonCard datapokemon={pokemon} />
+	   <button type="button" onClick={() => setPokemonName("Bulbasaur (de tes morts)")}>
+        LE "B"
+      </button>
+	  <button type="button" onClick={() => setPokemonName( "Mew")}>
+        LE "M"
+      </button>
+    </div>
+  );
 }
 
 export default App;
