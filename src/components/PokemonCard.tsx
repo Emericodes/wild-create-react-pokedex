@@ -1,5 +1,3 @@
-import "./PokemonCard.css"
-
 interface PokemonCard{
 	name: string;
 	imgSrc?: string;
@@ -8,7 +6,7 @@ interface PokemonCard{
 function PokemonCard({datapokemon}) {
 
 	return (
-		<figure>
+		<figure className ="card">
 			{datapokemon.imgSrc != null ? (
 				<img src={datapokemon.imgSrc} alt={datapokemon.name} />
 			) : (
