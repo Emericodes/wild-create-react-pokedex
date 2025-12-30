@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
 	"$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
 		"useIgnoreFile": false
+=======
+	"$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+>>>>>>> 2ab7cd7 (add useEffect for page alerts and handleButtonClick for Pikachu)
 	},
 	"files": {
 		"ignoreUnknown": false

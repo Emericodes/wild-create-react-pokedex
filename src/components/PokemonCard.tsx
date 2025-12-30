@@ -1,21 +1,22 @@
-import  '../components/PokemonCard.css';
-
-interface PokemonCard{
+interface PokemonProps {
+    pokemon :{
 	name: string;
 	imgSrc?: string;
+    };
 }
 
-function PokemonCard({datapokemon}) {
 
-	return (
-		<figure className ="card">
-			{datapokemon.imgSrc != null ? (
-				<img className ="card-img" src={datapokemon.imgSrc} alt={datapokemon.name} />
-			) : (
-				<p>???</p>
-			)}
-			<figcaption>{datapokemon.name}</figcaption>
-		</figure>
-	);
+function PokemonCard({ pokemon }: PokemonProps ) {
+	if (pokemon.imgSrc) {
+		return (
+			<figure>
+				<img src={pokemon.imgSrc} alt={pokemon.name} />
+				<figcaption>{pokemon.name}</figcaption>
+			</figure>
+		);
+	} else {
+		return <p>????</p>;
+	}
 }
+
 export default PokemonCard;

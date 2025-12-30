@@ -1,11 +1,16 @@
 {
+<<<<<<< HEAD
   "name": "pokedex-react-ts",
+=======
+  "name": "react-pokedex",
+>>>>>>> 2ab7cd7 (add useEffect for page alerts and handleButtonClick for Pikachu)
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+<<<<<<< HEAD
     "check": "biome check src",
     "check:fix": "biome check --write src",
     "preview": "vite preview"
@@ -23,5 +28,25 @@
     "@vitejs/plugin-react": "^5.0.4",
     "typescript": "~5.9.3",
     "vite": "^7.1.7"
+=======
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "check": "biome check --write .src",
+    "check:unsafe": "biome check --wirte -unsafe ./src",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+>>>>>>> 2ab7cd7 (add useEffect for page alerts and handleButtonClick for Pikachu)
   }
 }

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ab7cd7 (add useEffect for page alerts and handleButtonClick for Pikachu)
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
